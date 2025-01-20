@@ -26,14 +26,34 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
+*.env
 
 # Visual Studio Code related
 .classpath
 .project
 .settings/
-# .vscode/ Sync launch settings
+.vscode/
 
-# Packages file containing multi-root paths
+# Flutter repo-specific
+/bin/cache/
+/bin/internal/bootstrap.bat
+/bin/internal/bootstrap.sh
+/bin/mingit/
+/dev/benchmarks/mega_gallery/
+/dev/bots/.recipe_deps
+/dev/bots/android_tools/
+/dev/devicelab/ABresults*.json
+/dev/docs/doc/
+/dev/docs/flutter.docs.zip
+/dev/docs/lib/
+/dev/docs/pubspec.yaml
+/dev/integration_tests/**/xcuserdata
+/dev/integration_tests/**/Pods
+/packages/flutter/coverage/
+version
+analysis_benchmark.json
+
+# packages file containing multi-root paths
 .packages.generated
 
 # Flutter/Dart/Pub related
@@ -62,17 +82,6 @@ unlinked_spec.ds
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
 *.jks
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
-AndroidManifest.xml
-build.gradle
-settings.gradle
-gradle.properties
-gradle-wrapper.properties
-styles.xml
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -103,23 +112,15 @@ styles.xml
 **/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
-/ios/Runner/AppDelegate.swift
-/ios/Flutter/AppFrameworkInfo.plist
-/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
-/ios/Runner.xcworkspace/contents.xcworkspacedata
-/ios/Flutter/Debug.xcconfig
-/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
-/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
-/ios/RunnerTests/RunnerTests.swift
-/ios/Runner/Runner-Bridging-Header.h
-/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme
-/ios/Flutter/Release.xcconfig
+
+# macOS
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Coverage
+coverage/
 
 # Symbols
 app.*.symbols
-
-# Obfuscation related
-app.*.map.json
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
@@ -128,8 +129,3 @@ app.*.map.json
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
-
-
-
-
-
